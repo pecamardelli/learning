@@ -7,10 +7,11 @@ import { AuthorsService } from '../authors.service';
   styleUrls: ['./authors.component.css']
 })
 export class AuthorsComponent implements OnInit {
+  title: string  = 'List of Authors';
   authors: string[];
 
   constructor(service: AuthorsService) {
-    const authors = null;
+    this.authors = service.getAuthors();
   }
 
   ngOnInit(): void {
