@@ -1,5 +1,170 @@
-<h1>Angular</h1>
-<courses></courses>
-<app-authors></app-authors>
-<app-favourite></app-favourite>
-<app-title-case></app-title-case>
+<!--
+
+
+<h1><strong>Angular Training Lessons and Exercises</strong></h1>
+<hr>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Courses List Example</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <courses></courses>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Authors List Example</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-authors></app-authors>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Favourite Icon example</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+    <app-favourite (change)="onFavouriteChanged($event)"></app-favourite>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Title Case example</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-title-case></app-title-case>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    
+        In order to avoid all the extra markup that this approach generates in our code,
+        we'll use the ng-container custom element from Angular that prevents this from happening.
+        Div element will be replaced for ng-container. Note that the class must not be removed.
+    
+    <ng-container class="heading">
+        <h4>Hello World!</h4>
+    </ng-container>
+    <hr>
+    <div class="body">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+       <h4>Like Component exercise</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-like
+            [isActive]="tweet.isLiked"
+            [likesCount]="tweet.likesCount"
+        >
+        </app-like>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>ngIf Directive</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-ngif></app-ngif>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>ngSwitch Directive</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-ngswitch></app-ngswitch>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>ngForOf Directive</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-ngforof></app-ngforof>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Safe Traversal Operator</h4>
+        <p>Used to instruct Angular not to render a property if it's not defined.</p>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-safetravop></app-safetravop>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Custom Directives</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-customdirective></app-customdirective>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Zippy Component Exercise</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-zippy title="One After Nine-O-Nine">
+            My baby says she's travelling on the one after 909
+        </app-zippy>
+        <app-zippy title="Across the Universe">
+            Jai Guru Deva, Om...
+        </app-zippy>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Contact Form Example</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-contact-form></app-contact-form>
+    </ng-container>
+</bootstrap-card>
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Course Form Exercise</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <app-course-form></app-course-form>
+    </ng-container>
+</bootstrap-card>
+-->
+<br>
+<bootstrap-card>
+    <ng-container class="heading">        
+        <h4>Reactive Forms</h4>
+    </ng-container>
+    <hr>
+    <ng-container class="body">
+        <signup-form></signup-form>
+    </ng-container>
+</bootstrap-card>

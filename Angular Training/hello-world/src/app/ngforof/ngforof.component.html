@@ -1,0 +1,20 @@
+<button
+    class="btn btn-secondary"
+    (click)="onAdd()"
+    [ngStyle]="{
+        'backgroundColor': canAdd ? 'blue': 'gray',
+        'color': canAdd ? 'white': 'black'
+    }"
+>Add course</button>
+<ul>
+    <li *ngFor="let course of courses; even as isEven; index as i; trackBy: trackCourse">
+        <div class="row">
+            <div class="col-3">
+                {{ i }} - {{ course.name }} | ID: {{ course.id }} <span *ngIf="isEven">(EVEN)</span>
+            </div>
+            <div>
+                <button class="btn btn-secondary" (click)="onRemove(i)">Remove</button>
+            </div>
+        </div>
+    </li>
+</ul>
