@@ -17,6 +17,16 @@ export class SignupFormComponent {
     password: new FormControl('', Validators.required)
   })
 
+  login() {
+    // Uncomment this when the authService is available.
+    // const isValid = authService.login(this.form.value);
+    //if (!isValid) {
+      this.form.setErrors({
+        invalidLogin: true
+      });
+    //}
+  }
+
   get username() {
     return this.form.get('username');
   }
