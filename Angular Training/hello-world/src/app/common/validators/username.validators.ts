@@ -8,7 +8,14 @@ export class UsernameValidators {
         return null;
     }
 
-    static unique(control: AbstractControl): ValidationErrors | null {
-        return null;
+    static notUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (control.value === "pablin")
+                    resolve({ notunique: true });
+                else
+                    resolve(null);
+            }, 2000);
+        });
     }
 }
