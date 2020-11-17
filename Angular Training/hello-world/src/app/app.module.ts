@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,12 @@ import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/error-handler';
 import { FollowersComponent } from './followers/followers.component';
 import { FollowersService } from './services/followers.service';
+import { HomeComponent } from './home/home.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -61,14 +68,29 @@ import { FollowersService } from './services/followers.service';
     FormBuilderComponent,
     ChangePasswordComponent,
     PostsComponent,
-    FollowersComponent
+    FollowersComponent,
+    HomeComponent,
+    GithubProfileComponent,
+    NotFoundComponent,
+    NavbarComponent,
+    ArchivesComponent,
+    ArchiveComponent
   ],
   imports: [
-BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'followers/:id/:username', component: GithubProfileComponent },
+      { path: 'followers', component: FollowersComponent },
+      { path: 'posts', component: PostsComponent },
+      { path: 'archives/:year/:month', component: ArchiveComponent },
+      { path: 'archives', component: ArchivesComponent },
+      { path: '**', component: NotFoundComponent },
+    ])
   ],
   providers: [
     CoursesService,

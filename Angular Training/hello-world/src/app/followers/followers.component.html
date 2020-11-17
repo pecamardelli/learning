@@ -2,10 +2,10 @@
     <li class="media" *ngFor="let follower of followers">
         <img src="{{follower.avatar_url}}" alt="" class="mr-3 avatar">
         <div class="media-body">
-            <h4 class="mt-0 mb-1">{{follower.login}}</h4>
-            <a href="{{follower.html_url}}" target="_blank">
-                <h5>{{follower.html_url}}</h5>
+            <a [routerLink]="['/followers', follower.id, follower.login]">
+                <h4 class="mt-0 mb-1">{{follower.login}}</h4>
             </a>
+            <h5>{{follower.html_url}}</h5>
         </div>
     </li>
 </ul>
